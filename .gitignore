@@ -1,0 +1,8 @@
+# Unrelated workshop source files; retained locally but excluded from this portfolio repo.
+/PRD - Sunday Workshop - Copilot v2 for Microsoft.docx
+/stitch_pawconnect_local_pet_platform.zip
+/stitch_pawconnect_local_pet_platform/
+
+# Operating system files
+Thumbs.db
+.DS_Store

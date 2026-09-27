@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9ff">
+  <meta name="description" content="PawConnect is a Bengaluru neighborhood pet-community concept for discovering compatible pets and planning playdates.">
+  <title>PawConnect | A neighborhood pet community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f9ff;
+      --paper-blue: #e6eeff;
+      --paper-mint: #e0f4ea;
+      --green: #013428;
+      --green-soft: #2c6955;
+      --ink: #121c2a;
+      --muted: #59646d;
+      --line: #c0c8c3;
+      --coral: #a33a22;
+      --coral-wash: #ffdad2;
+      --white: #ffffff;
+      --content: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(var(--content), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid rgb(1 52 40 / 12%);
+    }
+
+    .wordmark {
+      color: var(--green);
+      font: 700 21px/1.1 "Plus Jakarta Sans", sans-serif;
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--coral); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--green-soft); }
+
+    .nav-cta {
+      padding: 10px 15px;
+      border: 1px solid var(--green);
+      border-radius: 5px;
+    }
+
+    .hero {
+      padding: 45px 0 38px;
+      text-align: center;
+      background-color: var(--paper);
+      background-image: linear-gradient(rgb(1 52 40 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(1 52 40 / 3%) 1px, transparent 1px);
+      background-size: 34px 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green-soft);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      color: var(--green);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .hero-lede {
+      max-width: 620px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 1px solid var(--green);
+      border-radius: 5px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); background: var(--green-soft); }
+
+    .button.secondary {
+      background: var(--paper);
+      color: var(--green);
+    }
+
+    .button.secondary:hover { background: var(--paper-mint); }
+
+    .preview-rail {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      gap: 14px;
+    }
+
+    .preview-rail a {
+      width: 122px;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5px;
+      border: 1px solid rgb(1 52 40 / 13%);
+      border-radius: 7px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgb(18 28 42 / 8%);
+      transition: transform 180ms ease;
+    }
+
+    .preview-rail a:first-child { transform: rotate(-3deg) translateY(9px); }
+    .preview-rail a:last-child { transform: rotate(3deg) translateY(9px); }
+    .preview-rail a:hover { transform: translateY(-4px); }
+
+    .preview-rail img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .section { padding: 76px 0; }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      max-width: 620px;
+      margin-bottom: 0;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      max-width: 390px;
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .screen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .screen-card {
+      overflow: hidden;
+      border: 1px solid rgb(1 52 40 / 13%);
+      border-radius: 7px;
+      background: var(--white);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .screen-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgb(18 28 42 / 10%);
+    }
+
+    .screen-card a { text-decoration: none; }
+
+    .screen-card img {
+      width: 100%;
+      height: 310px;
+      display: block;
+      padding: 12px;
+      border-bottom: 1px solid rgb(1 52 40 / 10%);
+      background: var(--paper-blue);
+      object-fit: contain;
+    }
+
+    .screen-card:nth-child(2n) img { background: var(--paper-mint); }
+    .screen-card:nth-child(3n) img { background: #f4e7e3; }
+
+    .screen-info { padding: 17px 18px 19px; }
+
+    .screen-number {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--coral);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .screen-info h3 {
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .screen-info p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .principles {
+      padding: 62px 0;
+      background: var(--green);
+      color: #eaf1ff;
+    }
+
+    .principles .eyebrow { color: #b1f0d6; }
+
+    .principles h2 {
+      max-width: 680px;
+      margin-bottom: 28px;
+      color: var(--white);
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .principle-grid article { border-top: 1px solid rgb(255 255 255 / 35%); padding-top: 15px; }
+
+    .principle-grid h3 {
+      margin-bottom: 7px;
+      color: #b1f0d6;
+      font-size: 17px;
+    }
+
+    .principle-grid p {
+      margin-bottom: 0;
+      color: #eaf1ff;
+      font-size: 13px;
+    }
+
+    .design-section { background: var(--paper-blue); }
+
+    .design-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
+      align-items: center;
+      gap: 48px;
+    }
+
+    .design-layout h2 {
+      margin-bottom: 12px;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    .design-layout p { max-width: 560px; margin-bottom: 0; color: var(--muted); }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .swatch {
+      min-height: 82px;
+      display: flex;
+      align-items: end;
+      padding: 8px;
+      border: 1px solid rgb(18 28 42 / 12%);
+      border-radius: 5px;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .swatch.green { background: #013428; color: white; }
+    .swatch.mint { background: #b1f0d6; color: #002117; }
+    .swatch.sky { background: #d9e3f6; color: #121c2a; }
+    .swatch.coral { background: #ffb4a2; color: #3c0700; }
+
+    .project-note {
+      padding: 45px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .note-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .note-inner p { max-width: 650px; margin-bottom: 0; color: var(--muted); font-size: 13px; }
+
+    .note-links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; font-weight: 700; }
+    .note-links a { color: var(--green); }
+
+    footer {
+      padding: 18px 0;
+      background: var(--paper-mint);
+      color: var(--green);
+      font-size: 11px;
+    }
+
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; }
+    .footer-inner p { margin: 0; }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--content), calc(100% - 32px)); }
+      .site-header { min-height: 64px; }
+      .nav-links { gap: 14px; font-size: 11px; }
+      .nav-cta { padding: 8px 10px; }
+      .hero { padding: 36px 0 30px; }
+      h1 { font-size: 48px; }
+      .hero-lede { max-width: 520px; font-size: 15px; }
+      .preview-rail { gap: 9px; }
+      .preview-rail a { width: 100px; height: 156px; }
+      .section { padding: 56px 0; }
+      .section-heading { display: block; }
+      .section-heading h2, .principles h2, .design-layout h2 { font-size: 30px; }
+      .section-heading p { margin-top: 10px; }
+      .screen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .screen-card img { height: 260px; }
+      .principle-grid { gap: 18px; }
+      .principle-grid h3 { font-size: 15px; }
+      .principle-grid p { font-size: 12px; }
+      .design-layout { grid-template-columns: 1fr; gap: 25px; }
+    }
+
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 28px); }
+      .site-header { min-height: 58px; }
+      .wordmark { font-size: 18px; }
+      .nav-links { gap: 10px; font-size: 10px; }
+      .nav-cta { padding: 7px 8px; }
+      .hero { padding: 32px 0 27px; }
+      .eyebrow { font-size: 9px; }
+      h1 { font-size: 42px; }
+      .hero-lede { max-width: 340px; font-size: 14px; }
+      .hero-actions { gap: 8px; margin-bottom: 22px; }
+      .button { min-height: 41px; padding-inline: 13px; font-size: 11px; }
+      .preview-rail { gap: 7px; }
+      .preview-rail a { width: 88px; height: 136px; padding: 4px; }
+      .screen-grid { grid-template-columns: 1fr; }
+      .screen-card img { height: 330px; }
+      .principle-grid { grid-template-columns: 1fr; gap: 21px; }
+      .swatches { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .swatch { min-height: 68px; padding: 6px; font-size: 8px; }
+      .note-inner { align-items: start; flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="PawConnect home">paw<span>connect</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#journey">The journey</a>
+      <a href="#approach">Design notes</a>
+      <a class="nav-cta" href="README.md">Project README</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow">A neighborhood pet community · Bengaluru, India</p>
+        <h1 id="page-title">PawConnect</h1>
+        <p class="hero-lede">Discover nearby companions, get to know their people, and make a little room in the calendar for a playdate.</p>
+        <div class="hero-actions">
+          <a class="button" href="#journey">Explore the screen journey</a>
+          <a class="button secondary" href="context.md">Read the product context</a>
+        </div>
+        <div class="preview-rail" aria-label="Three screen previews">
+          <a href="screens/discover_compatible_pets/code.html" aria-label="Open discover pets screen"><img src="screens/discover_compatible_pets/screen.png" alt="Discover compatible pets screen preview"></a>
+          <a href="screens/welcome_to_pawconnect/code.html" aria-label="Open welcome screen"><img src="screens/welcome_to_pawconnect/screen.png" alt="PawConnect welcome screen preview"></a>
+          <a href="screens/playdates_hub_confirmation/code.html" aria-label="Open playdates screen"><img src="screens/playdates_hub_confirmation/screen.png" alt="Playdates hub screen preview"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">From hello to playdate</p>
+          <h2 id="journey-title">A small journey, thoughtfully connected.</h2>
+        </div>
+        <p>Five visual concepts trace the first moments of finding a companion and making a plan. Select any screen to open its standalone prototype.</p>
+      </div>
+
+      <div class="screen-grid">
+        <article class="screen-card">
+          <a href="screens/welcome_to_pawconnect/code.html">
+            <img src="screens/welcome_to_pawconnect/screen.png" alt="PawConnect welcome screen">
+            <div class="screen-info"><span class="screen-number">01 / Welcome</span><h3>Meet your local community</h3><p>Start with a warm, neighborhood-first introduction.</p></div>
+          </a>
+        </article>
+        <article class="screen-card">
+          <a href="screens/discover_compatible_pets/code.html">
+            <img src="screens/discover_compatible_pets/screen.png" alt="Pet discovery screen">
+            <div class="screen-info"><span class="screen-number">02 / Discover</span><h3>Find a good fit</h3><p>Explore nearby pets and compatibility cues.</p></div>
+          </a>
+        </article>
+        <article class="screen-card">
+          <a href="screens/pet_profile_milo/code.html">
+            <img src="screens/pet_profile_milo/screen.png" alt="Milo's pet profile screen">
+            <div class="screen-info"><span class="screen-number">03 / Profile</span><h3>Get to know Milo</h3><p>Review a pet profile before reaching out.</p></div>
+          </a>
+        </article>
+        <article class="screen-card">
+          <a href="screens/schedule_playdate/code.html">
+            <img src="screens/schedule_playdate/screen.png" alt="Playdate scheduling screen">
+            <div class="screen-info"><span class="screen-number">04 / Schedule</span><h3>Make a plan together</h3><p>Move from discovery to coordinating a meetup.</p></div>
+          </a>
+        </article>
+        <article class="screen-card">
+          <a href="screens/playdates_hub_confirmation/code.html">
+            <img src="screens/playdates_hub_confirmation/screen.png" alt="Playdates hub confirmation screen">
+            <div class="screen-info"><span class="screen-number">05 / Playdates</span><h3>Keep plans in view</h3><p>See the playdate hub and confirmation state.</p></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="principles" id="approach" aria-labelledby="principles-title">
+      <div class="wrap">
+        <p class="eyebrow">Product approach</p>
+        <h2 id="principles-title">Good connections start with clarity and care.</h2>
+        <div class="principle-grid">
+          <article><h3>Local by design</h3><p>Make the neighborhood context useful while keeping location sharing intentional.</p></article>
+          <article><h3>Profiles with purpose</h3><p>Help owners find the details they need to decide whether to connect.</p></article>
+          <article><h3>Plans people can trust</h3><p>Keep playdate details clear and build safety, consent, and recovery into the next iteration.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section design-section" aria-labelledby="design-title">
+      <div class="wrap design-layout">
+        <div>
+          <p class="eyebrow">Botanical Warmth</p>
+          <h2 id="design-title">A calm palette with a lively little accent.</h2>
+          <p>Garden green and mint ground the experience; cool sky surfaces keep the interface airy, while coral adds a focused note of warmth. The supplied design tokens also define Plus Jakarta Sans for display text and Inter for interface copy.</p>
+        </div>
+        <div class="swatches" aria-label="PawConnect palette">
+          <div class="swatch green">Garden</div>
+          <div class="swatch mint">Mint</div>
+          <div class="swatch sky">Sky</div>
+          <div class="swatch coral">Coral</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-note wrap" aria-label="Project status and documentation">
+      <div class="note-inner">
+        <p><strong>Portfolio concept, not a live product.</strong> These screens show a proposed journey; they do not connect to user accounts, pet data, matching, scheduling, or a backend.</p>
+        <div class="note-links"><a href="context.md">Context</a><a href="plan.md">Project plan</a><a href="README.md">README</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><p>PawConnect · Independent product design concept</p><p>Bengaluru, India · 2026</p></div>
+  </footer>
+</body>
+</html>
