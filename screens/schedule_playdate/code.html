@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed": "#3c0700", "primary-fixed": "#bdeddb", "primary-fixed-dim": "#a1d0bf", "on-tertiary-container": "#ff9378", "surface-variant": "#d9e3f6", "inverse-surface": "#27313f", "surface-container-highest": "#d9e3f6", "primary": "#013428", "on-tertiary-fixed-variant": "#83260e", "inverse-primary": "#a1d0bf", "on-primary-fixed": "#002018", "primary-container": "#1e4b3e", "on-error": "#ffffff", "secondary-container": "#b1f0d6", "on-secondary-fixed-variant": "#0d503e", "surface-tint": "#3b6758", "on-primary-container": "#8cbaa9", "surface-dim": "#d0dbed", "background": "#f8f9ff", "error": "#ba1a1a", "on-secondary-container": "#326f5b", "surface-bright": "#f8f9ff", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "surface-container-low": "#eff4ff", "on-primary": "#ffffff", "on-secondary-fixed": "#002117", "tertiary": "#5c1000", "surface-container-lowest": "#ffffff", "surface": "#f8f9ff", "secondary-fixed": "#b1f0d6", "error-container": "#ffdad6", "tertiary-container": "#7e230b", "tertiary-fixed": "#ffdad2", "secondary-fixed-dim": "#95d3bb", "on-surface-variant": "#404945", "tertiary-fixed-dim": "#ffb4a2", "surface-container": "#e6eeff", "on-primary-fixed-variant": "#224e41", "on-background": "#121c2a", "on-surface": "#121c2a", "outline-variant": "#c0c8c3", "on-error-container": "#93000a", "secondary": "#2c6955", "surface-container-high": "#dee9fc", "outline": "#717975", "inverse-on-surface": "#eaf1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "space-xl": "2.5rem", "margin-lg": "3rem", "margin": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "gutter": "1rem", "gutter-md": "1.5rem", "margin-md": "2rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-xs": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, fontSize: { "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "title-md": ["18px", { lineHeight: "26px", fontWeight: "600" }], "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-xs": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.015em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_4px_20px_-4px_rgba(30,75,62,0.06)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-primary rounded-full hover:bg-surface-container transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="PawConnect Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XDbfT-A8Ri-ceWGV9_B8c71iseKogWbkRyYLD8ri7djuNukTvd2xdSked50PQnuY0WFq62zp0Ql-GJaQ5hmDKkKg4CV8-icJ0-UxfXHVeQ9R_Bfp-dHGPGFpcmohJubtXT5XbxVHK7yGIvRP2Tw5JXxZNqsL_z4lr3abkSSrPqMni2myD6m6CSW0xvrANLr0tVuF-UB6c6n_AowKqLJDCHC81MHAKcRNEG40fCxbAyG_u3I3WJoEJ63ew"/><h1 class="font-title-md text-title-md text-primary truncate ml-space-xs">Schedule Playdate</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQXofoHg9v9DQF88gIErCq69AVxYcs4L3ykuAMKYayMmlMVFXMxIHtKx9WwwSjCOK6zxKNLolVQlhJLeHs--4Cqm6kal6xBxKNKgNX2C8oHwpdjCXORKtg6GlJsB5JJs-onNNa2c3U-1t05l6jaxY9uBu1ADEFBKM_DfYqztJGQoJaa-QQoQqEt-JETnxv_YS9rQyjBkZAK7APpL7UinWUHRI5Uef8ndZG_A7UUnP_Z4y0ZqdRP5v"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<div class="px-space-md py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-secondary-container/40 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-xs text-label-xs tracking-wide uppercase">
+<span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+          Invitation Draft
+        </span>
+<button class="inline-flex items-center gap-1 text-primary font-label-xs text-label-xs bg-primary-fixed/50 hover:bg-primary-fixed px-2.5 py-1 rounded-full transition-colors active:scale-95" id="openSafetyBtn" type="button">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+          Safety Tips
+        </button>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative flex items-center shrink-0">
+<div class="w-14 h-14 rounded-full overflow-hidden shadow-sm bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close up warm portrait of Bruno a cheerful golden retriever smiling outdoors on green lawn with soft morning golden hour lighting in modern Bangalore park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy0AwPd9AFZlvB_OuPt_jds5qxx4yq_n6qhej5DLLj2psNZd8e8u2PBdjQ7hHUkQeP0MktsaREp5adrjSggbVLz5ie3fqeWfORSslqpUPGdZ7YJgbWQNWu3qbL-tL03iB99MsP0rtvZyvTqBcpVk6uZTbgR4_V-Dr0i_fz54pGCSjEwL8a-Pk1ATeuqQx_cdYmX8jlL6QtVGE9jJnquUFw2LTUUXNfyKkPae1mcdfSiDv1hglFUrcR"/>
+</div>
+<div class="w-14 h-14 rounded-full overflow-hidden shadow-sm -ml-4 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Vibrant portrait of Milo an alert and friendly Beagle wearing an olive green fabric harness on grass bathed in bright natural daytime illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz0LfLyE7TZghc1cs_3GZtys4ztAXKva6XCOHRiTH1lzE7V-vPqFU5kRCJhK0Q6rXGzZHD16VV7p-FKRpT88yZJqKRiODQKFJi5Z80v-Wa_FnZO0FGxLK1cqZuNqNFbgbCy6JSV9pejlR8nQD1D1f5luvvrY3eQ2mSk48hJGwalwGh8d4B5iCsB__3z_vWI45pSsK6AsN-s4QMvsd6tOo9I_Gaq8fXSqLzQAIJrqHyeFuFy2Y1QZeq"/>
+</div>
+<div class="absolute left-1/2 -bottom-1 -translate-x-1/2 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-headline-sm text-primary truncate">Bruno &amp; Milo</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Golden Retriever &amp; Beagle Meetup</p>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-xs text-label-xs text-secondary font-medium">96% Play Temperament Match</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-space-md mt-space-sm flex flex-col gap-space-lg">
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs flex items-center justify-center font-bold">1</span>
+<h3 class="font-title-md text-title-md text-on-surface">Select Date &amp; Time</h3>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-medium">October 2024</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 -mx-space-md px-space-md scroll-smooth" id="datePickerList">
+<button class="date-chip flex flex-col items-center justify-center py-2.5 px-3.5 rounded-xl bg-primary text-on-primary shadow-sm shrink-0 min-w-[96px] transition-all" type="button">
+<span class="font-label-xs text-label-xs opacity-80 uppercase tracking-wider">Tomorrow</span>
+<span class="font-title-md text-title-md font-bold mt-0.5">Sat, 14</span>
+</button>
+<button class="date-chip flex flex-col items-center justify-center py-2.5 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm shrink-0 min-w-[96px] transition-all hover:bg-surface-container-high" type="button">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Sunday</span>
+<span class="font-title-md text-title-md font-bold mt-0.5">Sun, 15</span>
+</button>
+<button class="date-chip flex flex-col items-center justify-center py-2.5 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm shrink-0 min-w-[96px] transition-all hover:bg-surface-container-high" type="button">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Monday</span>
+<span class="font-title-md text-title-md font-bold mt-0.5">Mon, 16</span>
+</button>
+<button class="date-chip flex flex-col items-center justify-center py-2.5 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm shrink-0 min-w-[96px] transition-all hover:bg-surface-container-high" type="button">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Tuesday</span>
+<span class="font-title-md text-title-md font-bold mt-0.5">Tue, 17</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<label class="time-radio flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Morning Walk</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">7:00 AM – 8:30 AM · Cooler weather</p>
+</div>
+</div>
+<input checked="" class="w-4 h-4 accent-primary text-primary" name="play_time" type="radio" value="morning"/>
+</label>
+<label class="time-radio flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Evening Play</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5:00 PM – 6:30 PM · High dog social hour</p>
+</div>
+</div>
+<input class="w-4 h-4 accent-primary text-primary" name="play_time" type="radio" value="evening"/>
+</label>
+<label class="time-radio flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Custom Time</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Propose a bespoke window</p>
+</div>
+</div>
+<input class="w-4 h-4 accent-primary text-primary" name="play_time" type="radio" value="custom"/>
+</label>
+</div>
+</section>
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs flex items-center justify-center font-bold">2</span>
+<h3 class="font-title-md text-title-md text-on-surface">Choose Verified Location</h3>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-medium">Bangalore Central</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-32 w-full relative">
+<div class="w-full h-full bg-cover bg-center" data-location="Defence Colony Dog Park, Indiranagar, Bangalore" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUblBICounVa1Da2oItJWv4xKvDGezqlbhssAAOiB7dYglWVQ-unEYqK3ky-xPg6p48_15P6IETEWTW1-zb7KR1dUhav0BrNS5xLQrzArFgaiViBTcuAUtd7zg2TwRbqDUxbgigkDU-nFXxSBnzPGnzIeLIur_-Fju41M4D4kXWwFLuDFuM3P7laOV7u9Spz25g7w3JEZjzaYnCc45m261C6LSV3prBaq0BrQ5PbZ66idxun-AfQrP')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary">
+<span class="font-label-sm text-label-sm font-semibold flex items-center gap-1 drop-shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">verified</span>
+              PawConnect Partner Venue
+            </span>
+<span class="font-label-xs text-label-xs bg-primary/80 backdrop-blur-sm px-2 py-0.5 rounded-full">
+              ★ 4.9 (128 reviews)
+            </span>
+</div>
+</div>
+<div class="p-3.5 flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Defence Colony Dog Park</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Indiranagar · 0.6 km from Bruno's location</p>
+</div>
+<span class="shrink-0 p-1.5 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px] block">check</span>
+</span>
+</div>
+<div class="flex flex-wrap gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">fence</span>
+              Double Gated
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">water_drop</span>
+              Fresh Water Stations
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">grass</span>
+              Agility Turf
+            </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Other Verified Venues Nearby</p>
+<div class="venue-option flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container transition cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Therpup dog cafe agility course outdoors in Whitefield Bangalore with wooden ramps green field and pet friendly tables under trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhg6CmJ2P8mlnTCnmhVCo52OsEo88aj2JdXURAy4Nb0iauIlJ7_sk4G1oYKCb1TYNF5h2yaDIFXeBKWtf23lthOwwecm3g5gBr7wDOE-ndepoBW7P-M5SfpgxXTfaH1cqiacbdp70LfasVcyaKEHXnDQ-YhzRQhP9GEgqXqceKrhRAgOxQxAm2EVWTWULH34IWjgVmPvJ5Bvjyfu5qhEqXXvqICWGyd9U0HdvTQ9yQUxjOoiI2IPX1"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">Therpup Dog Café</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Whitefield · Agility field &amp; pet gourmet menu</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0 ml-2">chevron_right</span>
+</div>
+<div class="venue-option flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container transition cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Scenic Cubbon park shaded canopy pathways with lush tropical Bangalore greenery dogs running on dedicated grassy off-leash zones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_eHGbjGa_pMwsvIx_ZozEZjP8UKgJj5J3Q-jsXuTERrdhwcYcVewJntZpcSafKdYNDSEvaLDHZp4aKxVqN9aTANnkDqgUv6mL7VoGF4Xl5_Kyc9gZk6shgSvn1_JMtJLG9y8zzH_32UhuQDFiBZ2z__iHMWlrSeDybZ1CF5QdhfFvoojBKdojvO0ZlcgN1XsjEI_5Iwphdo4Revkw8WVA2oHV7IZtsShB4UEVhlPu5Z7uiHeKc844"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">Cubbon Park Dog Section</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Kasturba Road · Best for high-energy social runs</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0 ml-2">chevron_right</span>
+</div>
+<div class="venue-option flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:bg-surface-container transition cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Boutique pet bakery and indoor bistro seating with dog treats and stylish botanical interior at Pet People Cafe HSR Bangalore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvF66ZA1fSrJeAOT1HVdH33EkXuxSsD-H8BtQoUg72lDw2S-7-p7hoFL_q-nxP9Mq1K0iOjM4XGMOaFzBWRdMwOqB9k1F0LpmTeonwixMu809PMtazNyPCZpfCNft9we3rS9cEVzXAVD1tFDo4BlubR38a66hb9m2sh1tlctcbITOOIfxzqUovL2KAGLSXjLNp8N089_gOei05H0Xok93pM5U0YsqOvgeVCSCEjsEw0KvTHaoklFSK"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">The Pet People Café</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">HSR Layout · Air-conditioned indoor social lounge</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0 ml-2">chevron_right</span>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-xs text-label-xs flex items-center justify-center font-bold">3</span>
+<h3 class="font-title-md text-title-md text-on-surface">Playdate Note &amp; Expectations</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm flex flex-col gap-3">
+<div>
+<label class="block font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wide mb-1.5 font-semibold">
+            Message for Milo's Parent (Ananya)
+          </label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors resize-none placeholder:text-outline" placeholder="Write a warm note..." rows="3">Hey Ananya! Would love to get Bruno and Milo together for some ball chasing at Defence Colony park this Saturday morning.</textarea>
+</div>
+<div>
+<span class="block font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wide mb-2 font-semibold">
+            Agreed Play Preferences
+          </span>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">link</span>
+<span class="font-body-md text-body-md text-on-surface">Keep on-leash initially (5 mins warm-up)</span>
+</div>
+<input checked="" class="w-4 h-4 rounded accent-primary text-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">sports_baseball</span>
+<span class="font-body-md text-body-md text-on-surface">Fetch toys allowed (Non-possessive)</span>
+</div>
+<input checked="" class="w-4 h-4 rounded accent-primary text-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">cookie</span>
+<span class="font-body-md text-body-md text-on-surface">Treat sharing OK (Hypoallergenic only)</span>
+</div>
+<input checked="" class="w-4 h-4 rounded accent-primary text-primary" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-primary/5 rounded-xl p-3.5 flex items-start gap-3 shadow-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-label-md font-semibold text-primary">Trust &amp; Safety Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Both pet parents have verified vaccination certificates and government ID checks. Public dog parks with secure fencing are strictly recommended for first-time meetups.
+        </p>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.98]" id="sendInviteBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+        Send Playdate Invitation
+      </button>
+<div class="flex items-center justify-between gap-3">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm text-center transition-colors" id="saveDraftBtn" type="button">
+          Save Draft
+        </button>
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm text-center transition-colors" onclick="history.back()" type="button">
+          Cancel
+        </button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden flex items-end justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="safetyModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl p-space-md shadow-xl flex flex-col gap-space-md transform transition-transform">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">health_and_safety</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Playdate Safety Tips</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="closeSafetyBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex gap-2.5">
+<span class="material-symbols-outlined text-secondary shrink-0 text-[18px]">timer</span>
+<p><strong class="text-on-surface">3-Second Greeting Rule:</strong> Let them sniff for 3 seconds, then gently recall to avoid overstimulation.</p>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex gap-2.5">
+<span class="material-symbols-outlined text-secondary shrink-0 text-[18px]">water_bottle</span>
+<p><strong class="text-on-surface">Hydration Breaks:</strong> Give both pups small water sips every 15 minutes, especially in humid Bangalore weather.</p>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex gap-2.5">
+<span class="material-symbols-outlined text-secondary shrink-0 text-[18px]">visibility</span>
+<p><strong class="text-on-surface">Watch Body Language:</strong> Stiff posture or pinned ears indicate it's time for a short leash break.</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold text-center mt-1" id="ackSafetyBtn">
+        Understood &amp; Ready
+      </button>
+</div>
+</div>
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-primary text-on-primary px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5" id="toastSuccess">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold" id="toastMsg">Invitation sent to Ananya &amp; Milo!</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Date chip selection
+    const dateChips = document.querySelectorAll('.date-chip');
+    dateChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        dateChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          const subText = c.querySelector('span:first-child');
+          if (subText) {
+            subText.classList.remove('opacity-80');
+            subText.classList.add('text-on-surface-variant');
+          }
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        chip.classList.add('bg-primary', 'text-on-primary');
+        const subText = chip.querySelector('span:first-child');
+        if (subText) {
+          subText.classList.remove('text-on-surface-variant');
+          subText.classList.add('opacity-80');
+        }
+      });
+    });
+
+    // Safety modal handlers
+    const safetyModal = document.getElementById('safetyModal');
+    const openSafetyBtn = document.getElementById('openSafetyBtn');
+    const closeSafetyBtn = document.getElementById('closeSafetyBtn');
+    const ackSafetyBtn = document.getElementById('ackSafetyBtn');
+
+    function toggleSafety(show) {
+      if (show) {
+        safetyModal.classList.remove('hidden');
+      } else {
+        safetyModal.classList.add('hidden');
+      }
+    }
+
+    if (openSafetyBtn) openSafetyBtn.addEventListener('click', () => toggleSafety(true));
+    if (closeSafetyBtn) closeSafetyBtn.addEventListener('click', () => toggleSafety(false));
+    if (ackSafetyBtn) ackSafetyBtn.addEventListener('click', () => toggleSafety(false));
+
+    // Toast notification
+    const toast = document.getElementById('toastSuccess');
+    const toastMsg = document.getElementById('toastMsg');
+    const sendInviteBtn = document.getElementById('sendInviteBtn');
+    const saveDraftBtn = document.getElementById('saveDraftBtn');
+
+    function showToast(message) {
+      if (!toast) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3200);
+    }
+
+    if (sendInviteBtn) {
+      sendInviteBtn.addEventListener('click', () => {
+        showToast('Invitation sent to Ananya & Milo!');
+      });
+    }
+
+    if (saveDraftBtn) {
+      saveDraftBtn.addEventListener('click', () => {
+        showToast('Draft playdate details saved.');
+      });
+    }
+  })();
+</script></main></body></html>
